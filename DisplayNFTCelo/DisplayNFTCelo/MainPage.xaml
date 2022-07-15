@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DisplayNFTCelo.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="Lime" Padding="8" CornerRadius="0">
+            <Label Text="Celo mobile app" HorizontalTextAlignment="Center" TextColor="Black" FontSize="24"/>
+        </Frame>
+        <Label Text="NFT contract address"  Margin="0,20,0,0" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
+        <Editor x:Name="Address" Margin="20,0" Text="0x6Fc1C8d59FdC261c55273f9b8e64B7E88C45E208" FontAttributes="Bold" FontSize="Medium"/>
+        <Label Text="NFT id number" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
+        <Grid ColumnDefinitions="*,*">
+            <Entry x:Name="NFTid" Keyboard="Numeric"></Entry>
+            <Button Grid.Column="1" Text="Query" Clicked="getNFT"></Button>
+        </Grid>
+        <Label x:Name="Name"  HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
+        <Image x:Name="NFTImage" />
+        <Label x:Name="Description"  HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="Medium"/>
+        <Button Text="Get random NFT" BackgroundColor="Lime" TextColor="Black" Margin="50,0" Clicked="getRandomNFT"/>
+    </StackLayout>
+
+</ContentPage>
